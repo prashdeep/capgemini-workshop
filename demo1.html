@@ -5,11 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body {
+            font-size: 1.5rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:rgb(52, 92, 179);
+            color:#ffffff;
+        }
+        ul{
+            border:1px solid red;
+            padding:10px;
+        }
+        li{
+            list-style-type: none;
+            text-transform: lowercase;
+            /**text-decoration: overline;*/
+            display: inline-block;
+            padding:10px 15px;
+            border: 5px solid #ccc;
+            background-color: #fff;
+            color:black;
+            margin:5px;
+
+        }
+
+
+        
+    </style>
 </head>
 <body>
     <header> 
         <nav>
             <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
                 <li>Home</li>
                 <li>About</li>
                 <li>Services</li>
@@ -41,11 +72,11 @@
         </article>
        <form method="POST" action="/serverside.asp">
           <label>First name</label>
-          <input type="text" name="firstname" placeholder="Enter your name">
+          <input type="text" name="firstname" placeholder="Enter your name" required minlength="4" maxlength="8">
           <br/>
-          <input type="email" name="email" placeholder="Enter your email">
+          <input type="email" name="email" placeholder="Enter your email" required>
           <br/>
-          <input type="password" name="password">
+          <input type="password" name="password" minlength="4" maxlength="6" pattern="/^ \w{5} [0-9]$/">
           <br/>
           <input type="hidden" name="hiddenField"/>
           <br/>
@@ -65,7 +96,16 @@
               <option value="Chennai">Chennai</option>
               <option value="Hyderabad">Hyderabad</option>
           </select>
+          <button type="submit">Submit</button>
+          <button type="button" >Clear</button>
        </form>
+       <h2>Video tag demo</h2>
+       <video controls autoplay>
+           <source src="assets/sample_video.mp4" type="video/mp4"/>
+       </video>
+       <audio>
+           <source src="assets/audio.mp3" type="audio/mp3"/>
+       </audio>
     </main>
     <footer>
         <span>Copyright 2019</span>
