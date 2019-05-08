@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transitions</title>
+    <style>
+        div{
+            width: 200px;
+            height:200px;
+            background-color: goldenrod;
+            border:1px solid #b4b4b4;
+            
+            font-size: 34px;
+            line-height: 100px;
+            text-align: center;
+
+        }
+
+        div:hover{
+            background-color: blue;
+            transform: rotateX(45deg);
+            width:400px;
+            height: 400px;
+            cursor: pointer;
+            color:white;
+            transition: all 2s ease-out;
+        }
+
+        a:visited{
+            color:red;
+        }
+        a:hover{
+            color:green;
+        }
+      
+    </style>
+</head>
+<body>
+
+    <div>
+        Click Me!!
+    </div>
+
+    <ul>
+        <li><a href="http://www.google.com">Google</a></li>
+        <li><a href="http://www.facebook.com">Facebook</a></li>
+        <li><a href="http://www.twitter.com">Twitter</a></li>
+    </ul>
+    
+</body>
+</html>

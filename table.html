@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+    <style>
+        body{
+            font-size: 20px;
+        }
+        table, tr, td,th{
+            border:1px solid black;
+        }
+
+        tr:nth-of-type(even){
+            background-color: red;
+            color:white;
+        }
+        tr:nth-of-type(odd){
+            background-color: green;
+            color:white;
+        }
+        /*thead > tr{
+            background-color: gold !important;
+            font-size: 40px;
+            color:red;
+        }*/
+        #header{
+            background-color: brown;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr id="header">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>Vinay</td>
+                <td>32</td>
+                <td>Bangalore</td>
+            </tr>
+            <tr>
+                    <td>101</td>
+                    <td>Vinay</td>
+                    <td>32</td>
+                    <td>Bangalore</td>
+                </tr>
+                <tr>
+                        <td>101</td>
+                        <td>Vinay</td>
+                        <td>32</td>
+                        <td>Bangalore</td>
+                    </tr>
+                    <tr>
+                            <td>101</td>
+                            <td>Vinay</td>
+                            <td>32</td>
+                            <td>Bangalore</td>
+                        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
