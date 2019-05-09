@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Demo</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var ages = [34,45,44,23,12,67,89];
+    //iterative
+    /*for ( var loop = 0; loop < ages.length; loop++){
+        console.log(ages[loop]);
+    }*/
+
+    var printNum = function(x){
+        console.log(x);
+    }
+
+    //ages.forEach(printNum);
+
+    var ageGT40 = function(age){
+        return age > 40;
+    }
+
+    //ages.filter(ageGT40).forEach(printNum);
+    ages.filter(function(age){return age < 40 }).forEach(function(num){
+        console.log(num);
+    })
+</script>
+</html>
