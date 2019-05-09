@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Currying In Javascript</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    var totalBill = function(amount, tax, tip){
+        return amount + tax + tip;
+    }
+
+    var karnatakaTax = function(amount){
+        var innerFunction = function(tip){
+            return totalBill(amount, 18, tip);
+        }
+        return innerFunction;
+    }
+
+    var keralaTax = function(amount){
+        return function(tip){
+            return totalBill(amount, 10, tip);
+        }
+    }
+
+    var mhTax = function(amount){
+        return  function(tip){
+            return totalBill(amount, 20, tip);
+        }
+    }
+
+    var udupiGarden = function(amount){
+       return function(){
+            return totalBill(amount, 20, 0);
+        }
+    }
+
+    var computeTotalAmountForKA = function(amount, tip){
+        return totalBill(amount, 18, tip);
+    }
+
+    var tipFun = karnatakaTax(400);
+    var kerala = keralaTax(400)
+    //console.log("The total bill is "+tipFun(20));
+
+    //console.log("The total bill in Kerala is "+kerala(20));
+    console.log(computeTotalAmountForKA(400,20));
+
+
+</script>
+</html>

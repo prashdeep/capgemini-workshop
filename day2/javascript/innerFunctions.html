@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inner Functions</title>
+</head>
+<body>
+
+</body>
+<script>
+    var outerFunction = function(firstName, lastName){
+        var location = "Bangalore";
+        var self = this;
+        console.log('The definition of this inside the outer function is '+this.name);
+        var innerFunction = function(){
+            console.log('The definition of this inside the inner function '+self.name);
+            return firstName+ " "+lastName + " from location "+location;
+        }
+        return innerFunction();
+    }
+
+     var user = {
+         name:"Hari"
+        };
+    console.log (outerFunction.call(user, "Krishna" ,"Kumar"));
+</script>
+</html>

@@ -29,10 +29,19 @@
         console.log("The name of the object is "+this.name + " location "+location );
     }
 
+    var printNamesOfUsers = function(arg1, arg2, arg3){
+        console.log(this.name + " "+arg1, arg2, arg3 );
+        
+    }
     var company ={
         name:'Capgemini',
         location:'Bangalore'
     }
-    printName.call(company, "Bangalore");
+    //printName.call(company, "Bangalore");
+
+    //printNamesOfUsers.call(company, 'Mohan', "Vinay","Krishna");
+
+    var fun = printNamesOfUsers.bind(company);
+    fun("a","bb", 'ccc');
 </script>
 </html>
