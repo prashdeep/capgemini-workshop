@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo1</title>
+    <style>
+            .container{
+                height: auto;
+            }
+            
+            
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+            }
+            li{
+                list-style-type: none;
+                margin:10px;
+                text-align: center;
+                padding:20px;
+                background-color: red;
+            }
+            li:hover{
+                background-color: white;
+                color:red;
+            }
+        
+        @media only screen and (min-width:800px){
+            .container{
+                height: 80px;
+                background-color: aquamarine;
+                color:#ffffff;
+            }
+            ul{
+                flex-direction: row;
+            }
+            
+        }
+
+        @media only screen and (min-width:700px){
+            .container{
+                height: auto;
+            }
+            ul{
+                flex-direction: row;
+            }
+        }
+       
+            
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

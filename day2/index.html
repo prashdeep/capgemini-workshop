@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Examples</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 4fr 2fr;
+            grid-template-rows: 50px 100vh 50px;
+            grid-gap: 10px;
+            grid-template-areas: 
+                "header header header"
+                "sidebar main sidebar-2"
+                "footer footer footer";
+
+        }
+        header{
+            grid-area: header;
+            background-color:red;
+
+        }
+        aside#left{
+            grid-area: sidebar;
+            background-color:green;
+
+        }
+        aside#right{
+            grid-area: sidebar-2;
+            background-color:green;
+
+        }
+            main{
+            grid-area: main;
+            background-color:blue;
+
+        }
+        footer{
+            grid-area: footer;
+            background-color:red;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>test</header>
+        <aside id="left">sidear</aside>
+        <aside id="right">sidear</aside>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

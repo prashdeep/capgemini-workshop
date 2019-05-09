@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid</title>
+    <style>
+        .container{
+            border:1px solid goldenrod;
+            margin:0 auto;
+            width:80%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 40px 500px 40px;  
+            grid-gap: 1em;
+            grid-template-areas: 
+            " header header header header"
+            "sidebar main main main"
+            "sidebar main main main"
+            "footer footer footer footer";
+        }
+        .item{
+            padding:20px;
+            border-radius: 10px;
+            color:#ffffff;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .item:nth-child(odd){
+            background-color: #55BBE9;
+        }
+        .item:nth-child(even){
+            background-color: #afbe29;
+        }
+        .header{
+            grid-area: header;
+        }
+        .sidebar{
+            grid-area: sidebar;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        .main{
+            grid-area: main;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">Three</div>
+        <div class="item sidebar">Four</div>
+        <div class="item main">Five</div>
+        <div class="item footer">Seven</div>
+
+    </div>
+</body>
+</html>
