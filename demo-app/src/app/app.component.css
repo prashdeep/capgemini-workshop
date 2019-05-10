@@ -1,0 +1,12 @@
+
+aside{
+    height: 100vh;
+    width:20%;
+    background-color:violet;
+    float: left;
+}
+
+#clear{
+    clear:both;
+}
+
