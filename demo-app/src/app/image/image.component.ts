@@ -9,7 +9,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ImageComponent {
 
   @Input('image-url') imagePath:string;
-  @Output('select') select = new EventEmitter();
+  @Output('dummy') select = new EventEmitter();
 
   clickHandler(value){
     console.log(value);

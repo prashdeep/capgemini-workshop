@@ -4,7 +4,7 @@
       [style.backgroundColor]="course.offer ? 'green':'red'"
       style="color:#fff;">
       <!--<img [src]="course.imgSrc" class="card-img-top" alt="...">---->
-      <app-image [image-url]="course.imgSrc" (select)="onSelectedCourse(val)"></app-image>
+      <app-image [image-url]="course.imgSrc" (dummy)="onSelectedCourse(val)"></app-image>
       <div class="card-body">
         <h5 class="card-title">{{course.title}}</h5>
         <h6 id="test" [textContent]="course.title"></h6>
