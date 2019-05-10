@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="card" class="col-md-4" 
+      *ngFor="let course of courses"
+      [style.backgroundColor]="course.offer ? 'green':'red'">
+      <img [src]="course.imgSrc" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{course.title}}</h5>
+        <h6 id="test" [textContent]="course.title"></h6>
+        <p class="card-text">{{course.desc}}</p>
+        <p>INR {{course.price}}</p>
+        <a href="#" 
+          class="btn" 
+          [class.btn-primary]="course.offer"
+          [class.btn-danger]="!course.offer"
+          (click)="checkOffer(course)">Check Offer Now!!</a>
+      </div>
+  </div>
+</div>
