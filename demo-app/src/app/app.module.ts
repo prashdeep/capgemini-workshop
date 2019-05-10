@@ -11,6 +11,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MainComponent } from './main/main.component';
 import { ProductsComponent } from './products/products.component';
 import { CourseComponent } from './course/course.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CourseComponent } from './course/course.component';
     NavBarComponent,
     MainComponent,
     ProductsComponent,
-    CourseComponent
+    CourseComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

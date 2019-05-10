@@ -45,4 +45,9 @@ export class CourseComponent{
     course.offer = !course.offer;
   }
 
+  onSelectedCourse(value){
+    console.log('Output handled in the parent component');
+    console.log(value);
+  }
+
 }
