@@ -3,16 +3,16 @@ var User = /** @class */ (function () {
         this._name = _name;
         this._age = _age;
         this._salary = _salary;
-        this._name = name;
-        //this._age = age;
-        //this._salary = salary;
+        this._name = _name;
+        this._age = _age;
+        this._salary = _salary;
     }
     Object.defineProperty(User.prototype, "name", {
         get: function () {
-            return this.name;
+            return this._name;
         },
         set: function (name) {
-            this.name = name;
+            this._name = name;
         },
         enumerable: true,
         configurable: true
