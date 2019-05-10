@@ -1,4 +1,4 @@
-class User {
+export class User {
 
     constructor(private _name:string, private _age?:number, private _salary?:number){
         this._name = _name;
@@ -22,9 +22,3 @@ class User {
     }
 }
 
-let ramesh = new User("Ramesh",22,30000);
-let user = new User("July",null, 3000);
-
-console.log(ramesh.name);
-//user.setName("Varsha");
-user.name = "Harsha";

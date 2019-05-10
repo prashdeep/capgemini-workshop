@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var User = /** @class */ (function () {
     function User(_name, _age, _salary) {
         this._name = _name;
@@ -29,8 +31,4 @@ var User = /** @class */ (function () {
     };
     return User;
 }());
-var ramesh = new User("Ramesh", 22, 30000);
-var user = new User("July", null, 3000);
-console.log(ramesh.name);
-//user.setName("Varsha");
-user.name = "Harsha";
+exports.User = User;
