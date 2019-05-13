@@ -1,6 +1,6 @@
 <div>
     <h1>User Registration</h1>
-    <form style="width:40%">
+    <form style="width:40%" #form="ngForm" (ngSubmit)="onSubmit(form)">
         <div class="form-group">
           <label for="exampleInputEmail1">First name</label>
           <input type="text" 
@@ -8,7 +8,6 @@
                 ngModel 
                 #firstName="ngModel"
                 name="firstname"
-                (change)="log(firstName)"
                 id="firstname" 
                 placeholder="Enter First name"
                 required
@@ -16,29 +15,48 @@
                 maxlength="6"
                 >
           </div>
+          <div *ngIf="firstName.touched && firstName.invalid" class="alert alert-danger" >
+              <div *ngIf="firstName.errors.minlength">Stille required  length is {{firstName.errors.minlength.requiredLength - firstName.errors.minlength.actualLength}}</div>
+          </div>
           <div class="form-group">
               <label for="exampleInputEmail1">Last name</label>
               <input 
                 type="text" 
-                class="form-control" 
-                id="lastname" 
+                class="form-control"
+                name="lastname" 
+                id="lastname"
+                ngModel 
+                #lastName = "ngModel" 
                 placeholder="Enter Last name"
                 required
                 minlength="4"
                 maxlength="8">
               </div>
+              <div *ngIf="lastName.touched && lastName.invalid" class="alert alert-danger" >
+                  Last name is invalid.
+              </div>
+              
           <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input 
             type="password" 
-            class="form-control" 
+            class="form-control"
+            name="password" 
             id="exampleInputPassword1" 
-            placeholder="Password"
+            ngModel 
+            #password="ngModel"
+            placeholder="password"
             required
                 minlength="4"
                 maxlength="8">
         </div>
-        
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div *ngIf="password.touched && password.invalid" class="alert alert-danger" >
+            Password name is invalid.
+        </div>
+        {{form.valid}}
+        <button 
+          type="submit" 
+          class="btn btn-primary"
+          [disabled]="!form.valid">Submit</button>
       </form>
 </div>

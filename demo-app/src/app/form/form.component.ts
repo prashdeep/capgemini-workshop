@@ -12,8 +12,11 @@ export class FormComponent implements OnInit {
   ngOnInit() {
   }
 
-  log(firstname){
-    console.log(firstname);
+  onSubmit(formData){
+    console.log('came inside the form submit function')
+    console.log(formData.value.firstname);
+    console.log(formData.value.lastname);
+    console.log(formData.value.password);
   }
 
 }
