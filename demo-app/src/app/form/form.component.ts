@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -7,16 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
 
   onSubmit(formData){
-    console.log('came inside the form submit function')
-    console.log(formData.value.firstname);
-    console.log(formData.value.lastname);
-    console.log(formData.value.password);
+    alert(`Form will be submitted with ${formData.value.firstname}`);
+    this.router.navigate(['/about']);
   }
 
 }
