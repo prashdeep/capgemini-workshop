@@ -13,6 +13,9 @@ import { CourseComponent } from './course/course.component';
 import { ImageComponent } from './image/image.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ParentComponent } from './parent/parent.component';
+import { AboutComponent } from './about/about.component';
+import { ServicesComponent } from './services/services.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,16 @@ import { ParentComponent } from './parent/parent.component';
     ProductsComponent,
     CourseComponent,
     ImageComponent,
-    ParentComponent
+    ParentComponent,
+    AboutComponent,
+    ServicesComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
