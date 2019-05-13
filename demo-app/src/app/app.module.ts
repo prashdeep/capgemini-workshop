@@ -12,6 +12,7 @@ import { ProductsComponent } from './products/products.component';
 import { CourseComponent } from './course/course.component';
 import { ImageComponent } from './image/image.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ParentComponent } from './parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     ProductsComponent,
     CourseComponent,
-    ImageComponent
+    ImageComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
