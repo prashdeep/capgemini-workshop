@@ -7,6 +7,7 @@ import { ServicesComponent } from './services/services.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { FormComponent } from './form/form.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path:'register',
     component:FormComponent
+  },
+  {
+    path:'pipe',
+    component:PipeComponent
   },
   {
     path:'**',

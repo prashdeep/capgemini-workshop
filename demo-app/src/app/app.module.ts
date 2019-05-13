@@ -19,6 +19,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { FormComponent } from './form/form.component';
 import {FormsModule} from '@angular/forms';
+import { PipeComponent } from './pipe/pipe.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import {FormsModule} from '@angular/forms';
     ServicesComponent,
     NotFoundComponent,
     ProductDetailsComponent,
-    FormComponent
+    FormComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,
