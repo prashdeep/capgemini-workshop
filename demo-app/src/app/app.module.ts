@@ -20,6 +20,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { FormComponent } from './form/form.component';
 import {FormsModule} from '@angular/forms';
 import { PipeComponent } from './pipe/pipe.component';
+import { OneComponent } from './one/one.component';
+import { TwoComponent } from './two/two.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,9 @@ import { PipeComponent } from './pipe/pipe.component';
     NotFoundComponent,
     ProductDetailsComponent,
     FormComponent,
-    PipeComponent
+    PipeComponent,
+    OneComponent,
+    TwoComponent
   ],
   imports: [
     BrowserModule,
