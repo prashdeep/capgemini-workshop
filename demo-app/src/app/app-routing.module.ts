@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path:'services',
     component:ServicesComponent
+  },
+  {
+    path:'products/:id',
+    component:ProductDetailsComponent
   },
   {
     path:'**',

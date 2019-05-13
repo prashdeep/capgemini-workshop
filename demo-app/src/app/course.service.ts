@@ -54,4 +54,8 @@ export class CourseService {
   findCourseByTitle(title){
     return this.courses.filter((courseName)=> courseName === title )[0];
   }
+
+  findPhotosById(id):Observable<any>{
+    return this.httpClient.get('https://jsonplaceholder.typicode.com/photos/'+id);
+  }
 }
