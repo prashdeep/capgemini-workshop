@@ -58,4 +58,8 @@ export class CourseService {
   findPhotosById(id):Observable<any>{
     return this.httpClient.get('https://jsonplaceholder.typicode.com/photos/'+id);
   }
+
+  saveUser(user){
+    this.httpClient.post('https://jsonplaceholder.typicode.com/user',JSON.stringify(user))
+  }
 }
