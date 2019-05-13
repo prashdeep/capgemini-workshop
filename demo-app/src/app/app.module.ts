@@ -17,7 +17,8 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-
+import { FormComponent } from './form/form.component';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,13 +35,14 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     AboutComponent,
     ServicesComponent,
     NotFoundComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

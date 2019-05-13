@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path:'products/:id',
     component:ProductDetailsComponent
+  },
+  {
+    path:'register',
+    component:FormComponent
   },
   {
     path:'**',
