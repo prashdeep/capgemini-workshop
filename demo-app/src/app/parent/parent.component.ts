@@ -7,7 +7,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
         <h1>Parent Component</h1>
         <p>
            Data from the Parent component{{title}}
-           <app-child [data]="users" (eventTriggered)="handleSubmitEventInParent()"></app-child>
+           <app-child [data]="users" (eventTriggered)="handleSubmitEventInParent($event)"></app-child>
            
         </p>
      </div>
@@ -32,8 +32,8 @@ export class ParentComponent implements OnInit, OnDestroy {
     console.log('Came inside the destroy method of the component')
   }
 
-  handleSubmitEventInParent(){
-    console.log('Printing the statement in the parent component ....')
+  handleSubmitEventInParent(data){
+    console.log(`Printing the statement in the parent component .... ${data.name}`)
   }
 
   

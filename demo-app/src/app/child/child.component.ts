@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       <div>
       <h1>Child Component</h1>
       <p>{{prop}} is passed from the Parent in the child</p>
-      <button class="btn btn-primary" (click)="handleClick()">HandleSubmit</button
+      <button class="btn btn-primary" (click)="handleClick()">HandleSubmit</button>
       <div>
   `,
   styleUrls: ['./child.component.css']
@@ -15,6 +15,10 @@ export class ChildComponent implements OnInit {
 
 
   @Input('data') prop;
+  data={
+    name:'Angular',
+    duration:12
+  }
 
   @Output ('eventTriggered') eventEmitter = new EventEmitter()
   constructor() { }
@@ -23,7 +27,7 @@ export class ChildComponent implements OnInit {
   }
 
   handleClick(){
-    this.eventEmitter.emit();
+    this.eventEmitter.emit(this.data);
   }
 
    
