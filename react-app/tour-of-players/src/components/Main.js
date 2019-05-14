@@ -27,8 +27,18 @@ class Main extends Component {
     }
 
     addPlayer(player){
-        console.log('came inside the add player method of the Main component ....');
-        console.log(this);
+        console.log('came inside the add player method of the Main');
+        console.log(player);
+        axios.post('https://jsonplaceholder.typicode.com/users', player)
+        .then(response => {
+            console.log('making a POST request to the serve ....')
+            console.log(response.data);
+            this.setState((state)=>{
+                console.log('setting the state with the new user....')
+                players:state.players.unshift(player);
+            })
+            console.log(this.state.players);
+        })
     }
 
     componentDidMount(){
@@ -53,8 +63,13 @@ class Main extends Component {
                         <List values={this.state.players} removePlayer={this.removePlayer}/>
                     </div>    
                 )}/>
-                <Route path="/AddPlayer" render ={()=>(
-                    <AddPlayer addPlayer={this.addPlayer}/>
+                <Route path="/AddPlayer"  render={ ({history})=>(
+                    <div>
+                        <AddPlayer addPlayer={(player)=>{
+                           this.addPlayer(player);
+                            history.push('/')
+                        }}/>
+                    </div>
                 )}/>
                  
             </div>

@@ -13,7 +13,8 @@ class AddPlayer extends Component {
       user.name = event.target.name.value;
       user.username = event.target.username.value;
       user.email = event.target.email.value;
-      this.props.addPlayer(user);
+      user.id=Math.round(Math.random() * 100);
+      this.props.addPlayer(user);               
     }
 
     render(){
