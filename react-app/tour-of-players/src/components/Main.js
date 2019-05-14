@@ -32,11 +32,9 @@ class Main extends Component {
         axios.post('https://jsonplaceholder.typicode.com/users', player)
         .then(response => {
             console.log('making a POST request to the serve ....')
-            console.log(response.data);
-            this.setState((state)=>{
-                console.log('setting the state with the new user....')
-                players:state.players.unshift(player);
-            })
+            this.setState((state)=>({
+                players:state.players.concat([player])
+            }))
             console.log(this.state.players);
         })
     }
@@ -53,6 +51,7 @@ class Main extends Component {
     }
     
     render(){
+        console.log('Came inside the render function after setting the state.')
         return (
             <div className="container" >
                 <Route exact path="/" render={()=>(
