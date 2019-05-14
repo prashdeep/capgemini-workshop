@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
 import List from './List';
 
-
+//let players=['Dhoni','Virat','Shikhar','Raina','Rohit'];
+//let cities=['Bangalore','Chennai','Mumbai','Hyderabad','Pune'];
 class Main extends Component {
+
+    state={
+        players:['Dhoni','Virat','Shikhar','Raina','Rohit'],
+        cities:['Bangalore','Chennai','Mumbai','Hyderabad','Pune']
+    }
+
     constructor(){
         super();
     }
@@ -14,7 +21,7 @@ class Main extends Component {
     render(){
         return (
             <div className="container" >
-                    <List values={this.props.players} log={this.logUser}/>
+                    <List values={this.state.players} log={this.logUser}/>
             </div>
         )
     }

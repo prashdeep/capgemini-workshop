@@ -19,9 +19,10 @@ const liItems = players.map(
             document.getElementById('root'));
 */
 
-let players=['Dhoni','Virat','Shikhar','Raina','Rohit'];
-let cities=['Bangalore','Chennai','Mumbai','Hyderabad','Pune'];
+//let players=['Dhoni','Virat','Shikhar','Raina','Rohit'];
+//let cities=['Bangalore','Chennai','Mumbai','Hyderabad','Pune'];
 
 ReactDOM.render(
-    <Main players={players} cities={cities} />, 
+    //<Main players={players} cities={cities} />,
+    <Main/> ,
     document.getElementById('root'));
