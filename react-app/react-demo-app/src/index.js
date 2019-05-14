@@ -6,7 +6,9 @@ import { BrowserRouter } from "react-router-dom";
 
 let cities = ['Bangalore','Chennai','Pune','Mumbai']
 let listElement=(
-    <div>
+
+    <div className="col-md-4">
+       
         <h1>Beautiful Cities!!</h1>
         <ul>
             {cities.map((city,index) => <li key={index}>{city}</li>)}

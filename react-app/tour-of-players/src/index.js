@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //import List,{calculateAge} from './components/List';
 import Main from './components/Main';
 
@@ -22,5 +23,5 @@ let players=['Dhoni','Virat','Shikhar','Raina','Rohit'];
 let cities=['Bangalore','Chennai','Mumbai','Hyderabad','Pune'];
 
 ReactDOM.render(
-    <Main players={players} cities={cities}/>, 
+    <Main players={players} cities={cities} />, 
     document.getElementById('root'));
