@@ -27,7 +27,7 @@ class Main extends Component {
     }
 
     addPlayer(player){
-        console.log('came inside the add player method');
+        console.log('came inside the add player method of the Main component ....');
         console.log(this);
     }
 
@@ -54,7 +54,7 @@ class Main extends Component {
                     </div>    
                 )}/>
                 <Route path="/AddPlayer" render ={()=>(
-                    <AddPlayer/>
+                    <AddPlayer addPlayer={this.addPlayer}/>
                 )}/>
                  
             </div>

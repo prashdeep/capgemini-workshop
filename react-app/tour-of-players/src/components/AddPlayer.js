@@ -1,16 +1,35 @@
 import React,{Component} from 'react';
 
 class AddPlayer extends Component {
-    constructor(){super();}
+    constructor(){
+        super();
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(event){
+      event.preventDefault();
+      let user={};
+
+      user.name = event.target.name.value;
+      user.username = event.target.username.value;
+      user.email = event.target.email.value;
+      this.props.addPlayer(user);
+    }
 
     render(){
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <div>
-                <input type="text" placeholder="Add Player" name="player"/>
+                    <input type="text" placeholder="Add Name" name="name"/>
+                </div>
+                <div>
+                    <input type="text" placeholder="Add Username" name="username"/>
+                </div>
+                <div>
+                    <input type="email" placeholder="Enter email address" name="email"/>
                 </div>
                 <br/>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary" >Submit</button>
             </form>
         )
     }
