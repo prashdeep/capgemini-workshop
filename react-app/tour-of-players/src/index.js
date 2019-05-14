@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import List,{calculateAge} from './components/List';
 import Main from './components/Main';
-
+import {BrowserRouter} from 'react-router-dom';
 /*
 const liItems = players.map(
         (player,index)=>
@@ -24,5 +24,5 @@ const liItems = players.map(
 
 ReactDOM.render(
     //<Main players={players} cities={cities} />,
-    <Main/> ,
+    <BrowserRouter><Main/></BrowserRouter> ,
     document.getElementById('root'));
