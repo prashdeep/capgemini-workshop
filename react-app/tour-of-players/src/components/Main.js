@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import List from './List';
+import axios from 'axios';
 
 //let players=['Dhoni','Virat','Shikhar','Raina','Rohit'];
 //let cities=['Bangalore','Chennai','Mumbai','Hyderabad','Pune'];
@@ -7,33 +8,7 @@ class Main extends Component {
     constructor(){
         super();
         this.state={
-            players:[ 
-                {
-                    "id": 1,
-                    "name": "Leanne Graham",
-                    "username": "Bret",
-                    "email": "Sincere@april.biz"
-                },
-                {
-                    "id": 2,
-                    "name": "Ervin Howell",
-                    "username": "Antonette",
-                    "email": "Shanna@melissa.tv",
-                },
-                {
-                    "id": 3,
-                    "name": "Clementine Bauch",
-                    "username": "Samantha",
-                    "email": "Nathan@yesenia.net",
-                },
-                {
-                    "id": 4,
-                    "name": "Patricia Lebsack",
-                    "username": "Karianne",
-                    "email": "Julianne.OConner@kory.org",
-                }
-
-            ]
+            players:[]
         }
         this.removePlayer = this.removePlayer.bind(this);
     }
@@ -44,8 +19,15 @@ class Main extends Component {
         this.setState((state)=>({
                 players:state.players.filter((passedPlayer)=> passedPlayer.id !== player.id )
         }));
-
     }
+
+    componentDidMount(){
+        axios.get('https://jsonplaceholder.typicode.com/users')
+        .then(response => {
+            this.setState({players: response.data})
+        })
+    }
+    
     render(){
         return (
             <div className="container" >
