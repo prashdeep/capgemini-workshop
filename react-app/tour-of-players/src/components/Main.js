@@ -13,10 +13,8 @@ class Main extends Component {
     }
     render(){
         return (
-            <div className="container">
-                <div className="row">
+            <div className="container" >
                     <List values={this.props.players} log={this.logUser}/>
-                </div>
             </div>
         )
     }

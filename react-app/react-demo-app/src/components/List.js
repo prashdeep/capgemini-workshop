@@ -1,10 +1,5 @@
 import React, {Component} from 'react';
 
-
-var styles = {
-    width: '25%'
-    
-  };
 class List extends Component{
     render(){
         return (

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-
-let players=['Dhoni','Virat','Shikhar','Raina','Rohit']
+import '../styles/style.css';
 
 let style={
     width:'20%'
@@ -10,9 +9,10 @@ class List extends Component{
 
     render(){
         return (
-                    <div className="card" style={style}>
+
+                    <div className="row">
                     {this.props.values.map((value, index) => (
-                        <div key={index}>
+                        <div  className="card" key={index} className="card-item">
                             <div className="card-body">
                             <h5 className="card-title">{value}</h5>
                             <a href="#" className="btn btn-primary" onClick={() => this.props.log(value)}>Details</a>
